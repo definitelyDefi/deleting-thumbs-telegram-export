@@ -5,7 +5,7 @@ directory = os.getcwd()
 for filename in os.listdir(directory):
     f = os.path.join(directory, filename)
 
-    if os.path.isfile(f) and os.path.splitext(f)[0].endswith('_thumb'):
+    if os.path.isfile(f) and os.path.splitext(f)[0].endswith('_thumb') or os.path.splitext(f)[0].endswith('(1)') or os.path.splitext(f)[0].endswith('(2)') or os.path.splitext(f)[0].endswith('(3)') or os.path.splitext(f)[0].endswith('(4)'):
         os.remove(f)
         print('[DELETED] - ',os.path.basename(f))
         
